@@ -78,11 +78,55 @@
     </div>
   </section>
 
-  <section class="profil">
-    <h2>Profil Organisasi</h2>
-    <p>Bagian ini dapat diisi dengan informasi tentang sekolah, visi, misi, dan sejarahnya.</p>
-  </section>
+<section class="profil-organisasi" id="profil">
+  <h2>Profil Organisasi</h2>
+  <div class="tab-buttons">
+    <button class="tab-btn active" onclick="showTab('sejarah')">Sejarah</button>
+    <button class="tab-btn" onclick="showTab('visi')">Visi & Misi</button>
+  </div>
 
+  <!-- SEJARAH -->
+  <div class="tab-content active" id="sejarah">
+    <div class="content-wrapper fade-in">
+      <img src="gedung.jpg" alt="Gedung Sekolah">
+      <div class="text">
+        <h3><span class="garis">|</span> Sejarah SMK Pemuda Kutorejo</h3>
+        <p>
+          SMK Pemuda Kutorejo berdiri sejak tahun 2008 sebagai lembaga pendidikan
+          kejuruan yang berfokus pada bidang teknologi dan otomotif. Dengan semangat
+          “Maju, Mandiri, dan Berprestasi”, sekolah ini terus berkembang hingga kini
+          memiliki ratusan siswa aktif serta berbagai fasilitas modern.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISI & MISI -->
+  <div class="tab-content" id="visi">
+    <div class="content-wrapper fade-in">
+      <img src="visi.jpg" alt="Visi dan Misi">
+      <div class="text">
+        <h3><span class="garis">|</span> Visi & Misi</h3>
+        <p><strong>Visi:</strong> Menjadi SMK unggul dalam kompetensi dan karakter.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+          <li>Meningkatkan mutu pendidikan berbasis teknologi.</li>
+          <li>Mengembangkan karakter disiplin dan kreatif.</li>
+          <li>Menjalin kerjasama dengan dunia industri.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
   <footer>
     <p>© 2025 smkpemudakutorejo. All Rights Reserved.</p>
   </footer>
